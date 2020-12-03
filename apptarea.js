@@ -1,11 +1,17 @@
-var lista = document.getElementById("lista"),
+var listaUrgente = document.getElementById("listaUrgente"),
 	tareaInputUrgente = document.getElementById("tareaInput");
-	tareaInputDiaria = document.getElementById("tareaInput");
-	tareaInputSemanal = document.getElementById("tareaInput");
 	btnNuevaTareaUrgente = document.getElementById("btn-agregar-urgente");
+
+
+var listaDiaria = document.getElementById("listaDiaria"),
+	tareaInputDiaria = document.getElementById("tareaInput");
 	btnNuevaTareaDiaria = document.getElementById("btn-agregar-diaria");
+
+
+var lista = document.getElementById("listaSemanal"),
+	tareaInputSemanal = document.getElementById("tareaInput");
 	btnNuevaTareaSemanal = document.getElementById("btn-agregar-semanal");
-	tareaInput = document.getElementById("tareaInput");
+
 
 
 
@@ -29,13 +35,13 @@ var agregarTareaUrgente = function(){
 
 	nuevaTareaUrgente.appendChild(enlaceUrgente);
 
-	lista.appendChild(nuevaTareaUrgente);
+	listaUrgente.appendChild(nuevaTareaUrgente);
 
 	tareaInputUrgente.value = "";
 
 
-	for (var i = 0; i <= lista.children.length -1; i++) {
-		lista.children[i].addEventListener("click", function(){
+	for (var i = 0; i <= listaUrgente.children.length -1; i++) {
+		listaUrgente.children[i].addEventListener("click", function(){
 			this.parentNode.removeChild(this);
 		});
 	}
@@ -63,13 +69,13 @@ var agregarTareaDiaria = function(){
 
 	nuevaTareaDiaria.appendChild(enlaceDiaria);
 
-	lista.appendChild(nuevaTareaDiaria);
+	listaDiaria.appendChild(nuevaTareaDiaria);
 
 	tareaInputDiaria.value = "";
 
 
-	for (var i = 0; i <= lista.children.length -1; i++) {
-		lista.children[i].addEventListener("click", function(){
+	for (var i = 0; i <= listaDiaria.children.length -1; i++) {
+		listaDiaria.children[i].addEventListener("click", function(){
 			this.parentNode.removeChild(this);
 		});
 	}
@@ -96,13 +102,13 @@ var agregarTareaSemanal = function(){
 
 	nuevaTareaSemanal.appendChild(enlaceSemanal);
 
-	lista.appendChild(nuevaTareaSemanal);
+	listaSemanal.appendChild(nuevaTareaSemanal);
 
 	tareaInputSemanal.value = "";
 
 
-	for (var i = 0; i <= lista.children.length -1; i++) {
-		lista.children[i].addEventListener("click", function(){
+	for (var i = 0; i <= listaSemanal.children.length -1; i++) {
+		listaSemanal.children[i].addEventListener("click", function(){
 			this.parentNode.removeChild(this);
 		});
 	}
@@ -138,29 +144,4 @@ tareaInputSemanal.addEventListener("click", comprobarInputSemanal);
 
 for (var i = 0; i <= lista.children.length -1; i++) {
 	lista.children[i].addEventListener("click", eleminarTarea);
-	// lista.children[i].addEventListener("click", eleminarTareaDiaria);
-	// lista.children[i].addEventListener("click", eleminarTareaSemanal);
-}
 
-
-// No puedo poner ni el color ni la fecha
-
-// let lis = document.querySelectorAll('#lista li')
-//
-// for (li of lis) {
-// 	btnNuevaTareaUrgente.addEventListener('click', recogerColor);
-// }
-//
-// function recogerColor(event) {
-//
-// 	let color = event.target.dataset.color;
-//
-// 	document.body.style.color = color;
-// }
-
-// fecha y hora
-// document.getElementById("myBtn").addEventListener("click", displayDate);
-//
-// function displayDate() {
-//   document.getElementById("demo").innerHTML = Date();
-// }
