@@ -113,21 +113,23 @@
     <div class="wrap">
       <form class="formulario" action="">
         <input type="text" id="tareaInput" placeholder="Nueva tarea">
-        <input type="button" class="boton1" onclick="document.getElementById('tarea').style.color='crimson'; tareaInputDiaria.value;" id="btn-agregar-urgente" value="Urgente">
-        <input type="button" class="boton2" onclick="document.getElementById('tarea').style.color='seagreen'; tareaInputDiaria.value;" id="btn-agregar-diaria" value="Diaria">
-        <input type="button" class="boton3" onclick="document.getElementById('tarea').style.color='royalblue'; tareaInputSemanal.value;" id="btn-agregar-semanal" value="Semanal">
-
+        <input type="button" class="boton1" onclick="document.getElementById('tareaUrgente').style.color='crimson'; tareaInputUrgente.value;" id="btn-agregar-urgente" value="Urgente">
+        <input type="button" class="boton2" onclick="document.getElementById('tareaDiaria').style.color='seagreen'; tareaInputDiaria.value;" id="btn-agregar-diaria" value="Diaria">
+        <input type="button" class="boton3" onclick="document.getElementById('tareaSemanal').style.color='royalblue'; tareaInputSemanal.value;" id="btn-agregar-semanal" value="Semanal">
       </form>
     </div>
   </div>
 
   <div class="tareas">
     <div class="wrap">
-      <ul class="lista" id="lista">
-        <li><a id="tarea" href="#">Tarea Urgente</a></li>
-        <li><a id="tarea" href="#">Tarea Diaria</a></li>
-        <li><a id="tarea" href="#">Tarea Semanal</a></li>
-
+      <ul class="lista" id="listaUrgente">
+        <li><a id="tareaUrgente" href="#">Tarea Urgente</a></li>
+      </ul>
+      <ul class="lista" id="listaDiaria">
+        <li><a id="tareaDiaria" href="#">Tarea Diaria</a></li>
+      </ul>
+      <ul class="lista" id="listaSemanal">
+        <li><a id="tareaSemanal" href="#">Tarea Semanal</a></li>
       </ul>
     </div>
 
